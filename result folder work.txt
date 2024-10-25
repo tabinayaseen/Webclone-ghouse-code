@@ -1,0 +1,41 @@
+result folder work:
+
+import Header from "../components/header";
+import Footer from "../components/footer";
+
+
+export default function Jobs() {
+
+    return (
+      <div>
+        <Header/>
+        
+    <div className="form-container">
+      <h2 className="form-title">Grand Entrance Exam Result</h2>
+      <form className="result-form">
+        <div className="form-group">
+          <label htmlFor="registrationNumber">Registration Number *</label>
+          <input
+            type="text"
+            id="registrationNumber"
+            placeholder="Registration Number"
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="cnic">CNIC or B-Form Number *</label>
+          <input
+            type="text"
+            id="cnic"
+            placeholder="CNIC or B-Form Number"
+            required
+          />
+        </div>
+        <button type="button" className="submit-btn">Get Result</button>
+      </form>
+    </div>
+    
+        <Footer />
+      </div>
+    );
+  }

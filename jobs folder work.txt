@@ -1,0 +1,18 @@
+jobs folder work:
+
+import Header from "../components/header";
+import Footer from "../components/footer";
+
+
+export default function Jobs() {
+
+    return (
+      <div>
+        <Header/>
+        <div className="job">
+     <h3>Jobs/ Internships coming soon.</h3>
+     </div>
+        <Footer />
+      </div>
+    );
+  }

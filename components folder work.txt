@@ -1,0 +1,251 @@
+//src/app/components///
+header.tsx file work:
+
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Header(){
+  return (
+   <header className=" w-full bg-gray-700" >
+    <div className="fixed top-0  w-full flex justify-evenly items-center bg-[#044E83] text-white pt-5 pb-5" >
+      <div className="absolute left-20 top-6  ">
+        <Image src={require("../../../public/picture/logo.png")} alt={"logo"} height={200} width={200} className="object-contain h-24 w-24" >
+        </Image>
+      </div>
+        
+        {/* i only applied routes on the pages , that is working */}
+        
+        <h1 className="font-bold text-xl ml-16 text-[#B9D8F3]">Tuition Free Education Program on Latest Technologies</h1>
+        <ul className="flex gap-9">
+          <Link href={""}>Home</Link>
+          <Link href={""}>Apply</Link>
+          <Link href={"../jobs"}>Jobs</Link>
+          <Link href={"../result"}>Result</Link>
+          <Link href={""}>Courses</Link>
+          </ul>
+      </div>
+
+   </header>
+      
+  );
+};
+
+
+footer.tsx file work:
+
+import Link from "next/link";
+import { CiMail } from "react-icons/ci";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTiktok,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+
+export default function Footer() {
+  return (
+    <footer className=" bg-[#F4F4F5]">
+      <div className="flex justify-evenly h-[25rem]  ">
+        <ul className="mt-[70px] ">
+          <p>Core Courses</p>
+          <a className="block">Programming Fundamentals</a>
+          <a className="block">Web2 Using NextJS</a>
+          <a className="block">Earn as You Learn</a>
+        </ul>
+        <ul className="mt-[70px] ">
+          <p>Advanced Courses</p>
+          <a className="block">Web 3 and Metaverse</a>
+          <a className="block">Cloud-Native Computing</a>
+          <a className="block">
+            Artificial Intelligence (AI) and Deep Learning
+          </a>
+          <a className="block">Ambient Computing and IoT</a>
+          <a className="block">Genomics and Bioinformatics</a>
+          <a className="block">Network Programmability and Automation</a>
+        </ul>
+
+{/* these links are not in working  */}
+        <ul className="mt-[70px] ">
+          <p>Social Links</p>
+          <ul className="flex gap-4">
+            <Link href={"/"} className="a">
+              <FaFacebook className="icon1 text-blue-700 bg-white  rounded-full inline-flex text-[28px] " />
+            </Link>
+            <Link href={"/"}>
+              <FaYoutube className=" icon2  text-white p-1 bg-red-600 rounded-full inline-flex  text-[28px]  " />
+            </Link>
+            <Link href={"/"}>
+              <FaTwitter className="icon3  text-white bg-sky-500 p-1 rounded-full inline-flex   text-[28px]  " />
+            </Link>
+            <Link href={"/"}>
+              <FaInstagram className="icon4  text-white p-1 bg-pink-500 rounded-full inline-flex  text-[28px] " />
+            </Link>
+            <Link href={"/"}>
+              <FaTiktok className="icon5  text-white rounded-full bg-black inline-flex p-1 text-[28px]  " />
+            </Link>
+          </ul>
+
+          <div className="mt-5">
+            <a>
+              <CiMail className="inline-flex text-2xl" /> education@governorsindh.com
+            </a>
+          </div>
+        </ul>
+      </div>
+    </footer>
+  );
+}
+
+
+hero.tsx file work:
+
+import React from "react";
+import Image from "next/image";
+
+const Hero = () => {
+  return (
+    <section className="w-full h-[100vh] pt-20 border-b-2 border-x-amber-100 ">
+      <div className="flex justify-between">
+        <div className="w-[60%] h-full ">
+          <div className="pt-20 pl-28">
+            <h1 className="text-5xl text-[#044E83] font-extrabold tracking-wide">
+              Governor Sindh
+            </h1>
+            <h2 className="text-4xl text-[#044E83] pb-3 tracking-wider">
+              Kamran Khan Tessori
+            </h2>
+            <h2 className="w-[390px] text-[#2EB6E8] text-[2.2rem] font-[800] leading-[40px] pb-4">
+              Certified Cloud Applied Generative AI Engineer (GenEng)
+            </h2>
+
+            <p className="text-[#044E83] font-[800] text-xl pb-3">
+              Earn up to $8,000 / month{" "}
+            </p>
+            <p className="text-[#044E83] font-[800] text-2xl w-[340px] pb-6">
+              Now admissions are open in Hyderabad
+            </p>
+            <div className="flex gap-32">
+              <button className="pt-2 pb-2  pl-12 pr-12 bg-[#044E83] text-white text-center border-none
+               font-[700] rounded-[6px]  ">
+                Apply Now
+              </button>
+              <div>
+                <p className="text-[#044E83] font-extrabold text-3xl">562,143</p>
+                <p> Accepted Applications</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-[40%] h-full pl-[100px]">
+          <Image
+            className="h-[40rem] w-[34rem] object-cover object-center "
+            src={require("../../../public/picture/governor.png")}
+            alt={"logo"}
+            height={600}
+            width={600}
+          ></Image>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
+
+
+hero2.tsx file work:
+
+import React from "react";
+import Image from "next/image";
+
+const Hero2 = () => {
+  return (
+    <div className="h-full m-28 text-center">
+      <h1 className=" text-[#044E83] font-bold text-3xl">
+        Certified Cloud Applied Generative AI Engineer (GenEng) and Solopreneur
+        Developing Billion-Dollar Valued Developers and Solopreneurs
+      </h1>
+      <p className="pt-9 pb-6 text-xl text-justify">
+        The pace of technological change is accelerating, big players like
+        Microsoft, Amazon, Google, and OpenAI are winning by providing
+        infrastructure, large AI foundation models, frameworks, 3D Metaverse
+        experiences, and massive distribution networks. Solopreneurs trained in
+        this program will win by automating work typically outsourced to
+        employees, by directly connecting to customers by eliminating the
+        middleman, and by developing vertical metaverses, thus paving the way
+        for the first billion-dollar valued solopreneur businesses. This program
+        has the objective to train this new breed of billion-dollar
+        solopreneurs. These solopreneurs will adopt the ultra-lean business
+        model and work independently and will not need to hire employees or
+        other team members.
+      </p>
+
+      <div className="grid grid-cols-3 mt-5 gap-5">
+        <Image
+          src={require("../../../public/picture/hero1.jpg")}
+          alt={"hero1"}
+          height={896}
+          width={1088}
+          className="rounded-[8px] w-full h-[300px] object-cover shadow-xl  shadow-zinc-700 "
+        ></Image>
+        <Image
+          src={require("../../../public/picture/hero2.jpg")}
+          alt={"hero2"}
+          height={375}
+          width={500}
+          className="rounded-[8px] w-full h-[300px] object-cover shadow-xl  shadow-zinc-700"
+        ></Image>
+        <Image
+          src={require("../../../public/picture/hero3.jpg")}
+          alt={"hero3"}
+          height={896}
+          width={1088}
+          className="rounded-[8px] w-full h-[300px] object-cover shadow-xl shadow-zinc-700"
+        ></Image>
+      </div>
+
+      <div className="courses-container">
+      <h2 className="courses-title">Core Courses Sequence</h2>
+      <div className="courses-grid">
+        <div className="course-card">
+        <Image
+          src={require("../../../public/picture/hero3.jpg")}
+          alt={"hero3"}
+          height={400}
+          width={500}
+          className="rounded-[8px] w-full h-[200px] object-cover shadow-xl shadow-zinc-700"
+        ></Image>
+          <h3>Programming Fundamentals</h3>
+        </div>
+        <div className="course-card">
+        <Image
+          src={require("../../../public/picture/hero2.jpg")}
+          alt={"hero3"}
+          height={400}
+          width={500}
+          className="rounded-[8px] w-full h-[200px] object-cover shadow-xl shadow-zinc-700"
+        ></Image>
+          <h3>Web2 Using NextJS</h3>
+        </div>
+        <div className="course-card">
+        <Image
+          src={require("../../../public/picture/hero1.jpg")}
+          alt={"hero3"}
+          height={400}
+          width={500}
+          className="rounded-[8px] w-full h-[200px] object-cover shadow-xl shadow-zinc-700"
+        ></Image>
+          <h3>Earn as You Learn</h3>
+        </div>
+      </div>
+    </div>
+    </div>  
+  );
+};
+export default Hero2;
+
+
+
